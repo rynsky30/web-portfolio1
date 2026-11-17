@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muhammad Ryan Hidayat — Portfolio</title>
+
+  <!-- Google Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+
+  <!-- Skip link for keyboard/screen-reader users -->
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header>
+    <nav aria-label="Navigasi utama">
+      <div class="nav__brand">
+        <a href="#hero" class="nav__logo">M Ryan Hidayat</a>
+      </div>
+
+      <button
+        class="nav__hamburger"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        aria-label="Buka atau tutup menu navigasi"
+      >
+        <span class="hamburger__icon" aria-hidden="true"></span>
+      </button>
+
+      <ul id="nav-menu" class="nav__list" role="list">
+        <li><a class="nav__link" href="#hero">Home</a></li>
+        <li><a class="nav__link" href="#about">About</a></li>
+        <li><a class="nav__link" href="#projects">Projects</a></li>
+        <li><a class="nav__link" href="#skills">Skills</a></li>
+        <li><a class="nav__link" href="#contact">Contact</a></li>
+        <li>
+          <button class="nav__theme-toggle" id="theme-toggle" aria-label="Ganti tema terang/gelap">
+            🌙
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main">
+
+    <!-- Hero -->
+    <section id="hero" aria-label="Perkenalan Muhammad Ryan Hidayat">
+      <img
+        src="assets/images/profile.webp"
+        alt="Foto profil Muhammad Ryan Hidayat"
+        loading="eager"
+        width="200"
+        height="200"
+        class="hero__photo"
+      >
+      <h1>Muhammad Ryan Hidayat</h1>
+      <p class="hero__tagline">Mahasiswa Teknik Informatika yang antusias di bidang pengembangan web dan pemrograman berbasis data.</p>
+      <a href="#projects" class="btn btn--primary hero__cta">Lihat Proyek</a>
+      <div class="hero__links">
+        <a
+          href="https://linkedin.com/in/ryanhidayat"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hero__social-link"
+          aria-label="Profil LinkedIn Muhammad Ryan Hidayat"
+        >LinkedIn ↗</a>
+        <a
+          href="https://github.com/ryanhidayat"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hero__social-link"
+          aria-label="Profil GitHub Muhammad Ryan Hidayat"
+        >GitHub ↗</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" aria-label="Tentang Muhammad Ryan Hidayat">
+      <div class="container">
+        <h2>Tentang Saya</h2>
+
+        <p>
+          Halo! Saya Muhammad Ryan Hidayat, mahasiswa <strong>Teknik Informatika</strong> di
+          <strong>Universitas Bina Insani</strong> yang memiliki ketertarikan mendalam pada
+          pengembangan web dan rekayasa perangkat lunak. Sejak awal kuliah, saya aktif belajar
+          membangun aplikasi berbasis web — mulai dari antarmuka pengguna yang responsif dengan
+          HTML, CSS, dan JavaScript, hingga logika sisi server menggunakan Python dan PHP.
+          Saya percaya bahwa kode yang baik bukan hanya kode yang berjalan, tetapi kode yang
+          mudah dibaca, dipelihara, dan dikembangkan oleh tim. Di luar kelas, saya senang
+          mengerjakan proyek pribadi, berkontribusi pada komunitas, dan terus memperbarui
+          pemahaman saya tentang teknologi terkini. Saya juga tertarik pada bidang keamanan
+          aplikasi web dan praktik pengembangan perangkat lunak yang terstruktur. Ketika tidak
+          sedang menulis kode, saya biasanya membaca dokumentasi teknis, mengikuti kursus
+          daring, atau berdiskusi dengan rekan-rekan tentang solusi terbaik untuk masalah
+          pemrograman sehari-hari.
+        </p>
+
+        <div class="about__meta">
+          <p>
+            <span class="about__label">Universitas:</span>
+            Universitas Bina Insani — Teknik Informatika
+          </p>
+          <p>
+            <span class="about__label">Angkatan:</span>
+            <span id="enrollment-year">2023</span>
+          </p>
+        </div>
+
+        <div class="about__goal">
+          <p>
+            <span class="about__label">Tujuan Karir:</span>
+            Menjadi software engineer full-stack yang mampu membangun produk digital berdampak,
+            dengan spesialisasi pada pengembangan web modern dan praktik rekayasa perangkat lunak
+            yang berkualitas tinggi.
+          </p>
+        </div>
+
+        <a
+          href="assets/docs/cv-ryan.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          id="cv-download-btn"
+          class="btn btn--primary"
+        >
+          Unduh CV ↗
+        </a>
+        <p id="cv-error-msg" class="cv-error" hidden aria-live="polite">
+          CV tidak dapat dimuat saat ini.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" aria-label="Proyek">
+      <h2>Proyek</h2>
+      <div id="projects-grid" class="projects__grid"></div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" aria-label="Keahlian">
+      <h2>Keahlian</h2>
+      <div id="skills-container" class="skills__grid"></div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-label="Kontak">
+      <div class="container">
+        <h2>Hubungi Saya</h2>
+
+        <form id="contact-form" novalidate>
+          <div class="form__group">
+            <label for="contact-name">Nama</label>
+            <input
+              type="text"
+              id="contact-name"
+              name="name"
+              maxlength="100"
+              autocomplete="name"
+              required
+            >
+            <div id="contact-name-error" class="form__error" role="alert" aria-live="polite"></div>
+          </div>
+
+          <div class="form__group">
+            <label for="contact-email">Email</label>
+            <input
+              type="email"
+              id="contact-email"
+              name="email"
+              maxlength="254"
+              autocomplete="email"
+              required
+            >
+            <div id="contact-email-error" class="form__error" role="alert" aria-live="polite"></div>
+          </div>
+
+          <div class="form__group">
+            <label for="contact-message">Pesan</label>
+            <textarea
+              id="contact-message"
+              name="message"
+              maxlength="1000"
+              rows="5"
+              required
+            ></textarea>
+            <div id="contact-message-error" class="form__error" role="alert" aria-live="polite"></div>
+          </div>
+
+          <button type="submit" class="btn btn--primary" id="contact-submit">
+            Kirim Pesan
+          </button>
+
+          <div id="form-status" role="alert" aria-live="polite"></div>
+        </form>
+
+        <div class="contact__social">
+          <p>— Atau temukan saya di —</p>
+          <div class="contact__social-links">
+            <a
+              href="https://linkedin.com/in/ryanhidayat"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact__social-link"
+              aria-label="Profil LinkedIn Muhammad Ryan Hidayat"
+            >LinkedIn ↗</a>
+            <a
+              href="https://github.com/ryanhidayat"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact__social-link"
+              aria-label="Profil GitHub Muhammad Ryan Hidayat"
+            >GitHub ↗</a>
+            <a
+              href="mailto:ryanhidayat@example.com"
+              class="contact__social-link"
+              aria-label="Kirim email ke Muhammad Ryan Hidayat"
+            >ryanhidayat@example.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2026 Muhammad Ryan Hidayat</p>
+    <p>Dibuat dengan HTML, CSS &amp; JavaScript</p>
+  </footer>
+
+  <!-- ===== JS MODULES ===== -->
+  <script type="module">
+    import { initTheme }                    from './assets/js/theme.js';
+    import { initNav }                      from './assets/js/nav.js';
+    import { renderProjects, renderSkills } from './assets/js/render.js';
+    import { initContactForm }              from './assets/js/form.js';
+
+    initTheme();
+    initNav();
+    renderProjects();
+    renderSkills();
+    initContactForm();
+  </script>
+
+</body>
+</html>

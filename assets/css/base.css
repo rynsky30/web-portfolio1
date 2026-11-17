@@ -1,0 +1,96 @@
+/* ==========================================================================
+   base.css — Reset, global typography, and theme transition
+   Requirements: 8.2, 9.5
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Box-sizing reset
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   2. Root element defaults
+   -------------------------------------------------------------------------- */
+html {
+  font-size: var(--text-base);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   3. Universal theme transition
+   Smooth color/shadow changes when switching between light and dark themes.
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  transition:
+    background-color 200ms ease,
+    color            200ms ease,
+    border-color     200ms ease,
+    box-shadow       200ms ease;
+}
+
+/* --------------------------------------------------------------------------
+   4. Reduced-motion override
+   Respects the user's OS preference to minimize non-essential motion.
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. Skip link (accessibility)
+   Visually hidden by default; moves into view on keyboard focus so users
+   can bypass the navigation and jump straight to main content.
+   -------------------------------------------------------------------------- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  clip: auto;
+  clip-path: none;
+  white-space: normal;
+  overflow: visible;
+  width: auto;
+  height: auto;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  padding: 0.75rem 1.25rem;
+  z-index: 9999;
+  outline: 3px solid var(--color-accent, currentColor);
+  outline-offset: 2px;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 600;
+  border-bottom-right-radius: 4px;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "revou-coding-camp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest --run",
+    "test:watch": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rynsky30/revou-coding-camp.git"
+  },
+  "keywords": [],
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/rynsky30/revou-coding-camp/issues"
+  },
+  "homepage": "https://github.com/rynsky30/revou-coding-camp#readme",
+  "devDependencies": {
+    "axe-core": "^4.14.1",
+    "jsdom": "^31.0.1",
+    "vitest": "^5.1.0"
+  },
+  "vitest": {
+    "environment": "jsdom",
+    "globals": true
+  }
+}

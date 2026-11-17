@@ -1,0 +1,654 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Create the full directory structure": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849873800
+      },
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849882046
+      },
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794850001051
+      }
+    ],
+    "1.2 Write the `index.html` skeleton": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849874139
+      },
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794850004518
+      },
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794850037955
+      }
+    ],
+    "2.1 Write `variables.css` with CSS Custom Properties": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849874309
+      },
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794850041189
+      },
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794850068531
+      }
+    ],
+    "2.2 Write `base.css` — reset, global typography, and theme transition": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849874423
+      },
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794850072527
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850156214
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850156544
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850163473
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850210154
+      }
+    ],
+    "2.3 Write `layout.css` — container, section spacing, and responsive grid breakpoints": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849874542
+      },
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794850076347
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850156335
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850156647
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850166562
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850213190
+      }
+    ],
+    "2.4 Write `animations.css` — keyframes and skeleton shimmer": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849874674
+      },
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794850079445
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850156444
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850156756
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850169652
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850216285
+      }
+    ],
+    "3.1 Write navigation HTML markup inside `index.html`": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849874785
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850219775
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850625879
+      }
+    ],
+    "3.2 Write `components.css` navigation styles": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849874908
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850648526
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794851094725
+      }
+    ],
+    "3.3 Implement `nav.js`": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849875069
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850651608
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794851098195
+      }
+    ],
+    "4.1 Write Hero section HTML markup in `index.html`": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849875215
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850222971
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850629289
+      }
+    ],
+    "4.2 Write Hero section CSS in `components.css`": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849875389
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850654755
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794851101745
+      }
+    ],
+    "5.1 Write About section HTML markup in `index.html`": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849875521
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850226006
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850632515
+      }
+    ],
+    "5.2 Implement CV download error handler in `form.js` or a dedicated inline script": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849875641
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850657898
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794851105518
+      }
+    ],
+    "6.1 Define `projects` array and `skills` array in `data.js`": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849875740
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850229122
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850635851
+      }
+    ],
+    "7.1 Write Projects section HTML scaffold in `index.html`": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849875929
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850232359
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850639025
+      }
+    ],
+    "7.2 Implement `render.js` — `renderProjects()` and `createProjectCard()`": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849876115
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850661039
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794851109042
+      }
+    ],
+    "7.3 Write Project card CSS in `components.css`": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849876301
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794851122579
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794853220488
+      }
+    ],
+    "8.1 Write Skills section HTML scaffold in `index.html`": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849876472
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850235425
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850642076
+      }
+    ],
+    "8.2 Implement `renderSkills()` and `createSkillGroup()` in `render.js`": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849876766
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850664074
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794851112266
+      }
+    ],
+    "8.3 Write Skills section CSS in `components.css`": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849876872
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794851125857
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794853224310
+      }
+    ],
+    "9.1 Write Contact section HTML markup in `index.html`": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849877014
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850238514
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850645010
+      }
+    ],
+    "9.2 Implement `form.js`": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849877138
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850667139
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794851115571
+      }
+    ],
+    "9.3 Write Contact section CSS in `components.css`": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849877281
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794851128801
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794853228977
+      }
+    ],
+    "10.1 Implement `theme.js`": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849877410
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850670622
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794851118871
+      }
+    ],
+    "11.1 Audit and fix semantic HTML structure": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849877507
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794851131965
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794853233057
+      }
+    ],
+    "11.2 Audit and fix all `alt` attributes and image constraints": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849877620
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794851138603
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794853237331
+      }
+    ],
+    "11.3 Verify WCAG AA color contrast and responsive text sizes": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849877741
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794851142049
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794853240876
+      }
+    ],
+    "11.4 Implement image skeleton loaders in `render.js`": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849877876
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794853244825
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794853262538
+      }
+    ],
+    "11.5 Run automated accessibility check with axe-core": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849878063
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794853266264
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794872774282
+      }
+    ],
+    "12. Checkpoint — wire everything together and validate": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849878181
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794872778297
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794872823823
+      }
+    ],
+    "13. Final checkpoint — run all property-based tests": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794849878346
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794872827591
+      },
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794873444986
+      }
+    ],
+    "1. Scaffolding — project structure and HTML skeleton": [
+      {
+        "executionId": "a9846663-109b-4014-82f2-3c071f7a50f0",
+        "chatSessionId": "sess_e5cd387f-ab19-4103-b73b-81513a75c707",
+        "timestamp": 1794850038070
+      }
+    ],
+    "2. CSS architecture — design tokens, dark mode, and responsive layout": [
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850216387
+      }
+    ],
+    "6. Data layer — `data.js`": [
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794850635950
+      }
+    ],
+    "3. Navigation component": [
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794851098338
+      }
+    ],
+    "4. Hero section": [
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794851101903
+      }
+    ],
+    "5. About section": [
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794851105627
+      }
+    ],
+    "10. Dark mode — `theme.js`": [
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794851118991
+      }
+    ],
+    "7. Projects section — `render.js` and HTML/CSS": [
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794853220671
+      }
+    ],
+    "8. Skills section — `render.js` extension and HTML/CSS": [
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794853224514
+      }
+    ],
+    "9. Contact section — `form.js` and HTML/CSS": [
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794853229148
+      }
+    ],
+    "11. Performance and accessibility pass": [
+      {
+        "executionId": "05be2f34-eeae-48a6-804e-d75989fdd86e",
+        "chatSessionId": "sess_c2c03367-350a-46f6-9e6c-a194416bcb98",
+        "timestamp": 1794872774471
+      }
+    ]
+  }
+}
