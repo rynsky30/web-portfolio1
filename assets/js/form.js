@@ -1,6 +1,7 @@
 // form.js — Contact form validation and submission
 
-const FORMSPREE_URL = 'https://formspree.io/f/PLACEHOLDER';
+// Replace with your actual Formspree endpoint before deploying.
+const FORMSPREE_URL = 'https://formspree.io/f/YOUR_FORM_ID';
 
 // ─── Validation ───────────────────────────────────────────────────────────────
 
@@ -21,7 +22,6 @@ export function validateName(value) {
 
 /**
  * Validate the email field.
- * Rules: non-empty, must contain '@' followed by at least one char, '.', and at least one char.
  * @param {string} value
  * @returns {{ valid: boolean, error: string }}
  */
@@ -33,10 +33,9 @@ export function validateEmail(value) {
   if (atIndex === -1) {
     return { valid: false, error: 'Email harus mengandung karakter "@".' };
   }
-  const domain = value.slice(atIndex + 1); // everything after '@'
+  const domain = value.slice(atIndex + 1);
   const dotIndex = domain.indexOf('.');
   if (dotIndex === -1 || dotIndex === 0 || dotIndex === domain.length - 1) {
-    // no dot, or dot is first char of domain, or dot is last char of domain
     return { valid: false, error: 'Email harus mengandung domain yang valid (contoh: nama@domain.com).' };
   }
   return { valid: true, error: '' };
@@ -59,54 +58,41 @@ export function validateMessage(value) {
 
 // ─── UI Helpers ───────────────────────────────────────────────────────────────
 
-/**
- * Show an inline error message below the given field.
- * @param {HTMLElement} field - The input or textarea element
- * @param {string} message
- */
+/** Show an inline error below the given field. */
 function showFieldError(field, message) {
   const errorEl = document.getElementById(`${field.id}-error`);
-  if (errorEl) {
-    errorEl.textContent = message;
-  }
+  if (errorEl) errorEl.textContent = message;
   field.setAttribute('aria-invalid', 'true');
 }
 
-/**
- * Clear the inline error message below the given field.
- * @param {HTMLElement} field - The input or textarea element
- */
+/** Clear the inline error for the given field. */
 function clearFieldError(field) {
   const errorEl = document.getElementById(`${field.id}-error`);
-  if (errorEl) {
-    errorEl.textContent = '';
-  }
+  if (errorEl) errorEl.textContent = '';
   field.removeAttribute('aria-invalid');
 }
 
-/**
- * Display a form-level status message.
- * @param {'success' | 'error'} type
- * @param {string} message
- */
+/** Show a form-level status banner. */
 function showFormStatus(type, message) {
   const statusEl = document.getElementById('form-status');
   if (!statusEl) return;
   statusEl.textContent = message;
-  statusEl.className = `form-status form-status--${type}`;
+  statusEl.className = `form-status--${type}`;
 }
 
 // ─── Submission ───────────────────────────────────────────────────────────────
 
 /**
- * POST form data to Formspree.
- * On success: shows success status and resets the form.
- * On failure: shows error status, re-enables the submit button, preserves field values.
- * @param {{ name: string, email: string, message: string }} data
- * @param {HTMLFormElement} form
- * @param {HTMLButtonElement} submitBtn
+ * POST the form payload to the Formspree endpoint.
  */
 async function submitToFormspree(data, form, submitBtn) {
+  // Safety net: if the endpoint is still a placeholder, do not attempt fetch.
+  if (FORMSPREE_URL.includes('YOUR_FORM_ID')) {
+    showFormStatus('error', 'Form belum terhubung ke layanan email. Hubungi saya langsung lewat email atau LinkedIn di samping.');
+    submitBtn.disabled = false;
+    return;
+  }
+
   try {
     const response = await fetch(FORMSPREE_URL, {
       method: 'POST',
@@ -118,10 +104,10 @@ async function submitToFormspree(data, form, submitBtn) {
     });
 
     if (response.ok) {
-      showFormStatus('success', 'Pesan berhasil dikirim! Terima kasih telah menghubungi saya.');
+      showFormStatus('success', 'Pesan berhasil dikirim! Terima kasih, saya akan segera membalas.');
       form.reset();
     } else {
-      showFormStatus('error', 'Pengiriman pesan gagal. Silakan coba lagi atau hubungi saya melalui email.');
+      showFormStatus('error', 'Pengiriman gagal. Silakan coba lagi atau hubungi saya lewat email.');
       submitBtn.disabled = false;
     }
   } catch {
@@ -134,7 +120,6 @@ async function submitToFormspree(data, form, submitBtn) {
 
 /**
  * Attach submit listener to #contact-form.
- * Also run the CV availability check on DOMContentLoaded.
  */
 export function initContactForm() {
   const form = document.getElementById('contact-form');
@@ -148,10 +133,10 @@ export function initContactForm() {
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    // Clear previous errors and status
     clearFieldError(nameField);
     clearFieldError(emailField);
     clearFieldError(messageField);
+
     const statusEl = document.getElementById('form-status');
     if (statusEl) statusEl.textContent = '';
 
@@ -161,22 +146,12 @@ export function initContactForm() {
 
     let isValid = true;
 
-    if (!nameResult.valid) {
-      showFieldError(nameField, nameResult.error);
-      isValid = false;
-    }
-    if (!emailResult.valid) {
-      showFieldError(emailField, emailResult.error);
-      isValid = false;
-    }
-    if (!messageResult.valid) {
-      showFieldError(messageField, messageResult.error);
-      isValid = false;
-    }
+    if (!nameResult.valid)    { showFieldError(nameField, nameResult.error);    isValid = false; }
+    if (!emailResult.valid)   { showFieldError(emailField, emailResult.error);  isValid = false; }
+    if (!messageResult.valid) { showFieldError(messageField, messageResult.error); isValid = false; }
 
     if (!isValid) return;
 
-    // All fields valid — disable button and submit
     submitBtn.disabled = true;
 
     await submitToFormspree(
@@ -191,16 +166,15 @@ export function initContactForm() {
   });
 }
 
-// ─── CV Download Check ────────────────────────────────────────────────────────
+// ─── CV Download Availability Check ───────────────────────────────────────────
 
 /**
  * On DOMContentLoaded, HEAD-check the CV PDF.
- * If unavailable (non-2xx or network error), disable the button and show the error message.
+ * If unavailable, disable the button and show the error message.
  */
 document.addEventListener('DOMContentLoaded', async () => {
   const cvBtn      = document.getElementById('cv-download-btn');
   const cvErrorMsg = document.getElementById('cv-error-msg');
-
   if (!cvBtn || !cvErrorMsg) return;
 
   try {

@@ -1,4 +1,4 @@
-// data.js — Static data: projects and skills arrays
+﻿// data.js â€” Static data: projects and skills arrays
 
 /**
  * @typedef {Object} Project
@@ -18,9 +18,9 @@ export const projects = [
     title: "Todo App",
     description: "Aplikasi manajemen tugas berbasis web dengan fitur tambah, edit, hapus, dan tandai tugas selesai.",
     tags: ["JavaScript", "HTML5", "CSS3"],
-    image: "assets/images/projects/todo.webp",
-    repoUrl: "https://github.com/ryanhidayat/todo-app",
-    demoUrl: "https://ryanhidayat.github.io/todo-app"
+    image: "assets/images/projects/todo-app.webp",
+    repoUrl: "https://github.com/rynsky30/todo-app",
+    demoUrl: "https://rynsky30.github.io/todo-app"
   },
   {
     id: "student-management",
@@ -28,7 +28,7 @@ export const projects = [
     description: "Aplikasi CRUD untuk mengelola data mahasiswa dengan fitur pencarian dan ekspor ke CSV menggunakan Python Flask.",
     tags: ["Python", "Flask", "MySQL", "Bootstrap"],
     image: "assets/images/projects/student-management.webp",
-    repoUrl: "https://github.com/ryanhidayat/student-management",
+    repoUrl: "https://github.com/rynsky30/student-management",
     demoUrl: null
   },
   {
@@ -37,7 +37,7 @@ export const projects = [
     description: "Platform peminjaman buku digital berbasis web dengan autentikasi pengguna dan manajemen koleksi buku.",
     tags: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
     image: "assets/images/projects/library-system.webp",
-    repoUrl: "https://github.com/ryanhidayat/library-system",
+    repoUrl: "https://github.com/rynsky30/library-system",
     demoUrl: null
   },
   {
@@ -46,8 +46,8 @@ export const projects = [
     description: "Aplikasi pencatat pengeluaran harian dengan visualisasi grafik dan laporan bulanan berbasis JavaScript.",
     tags: ["JavaScript", "HTML5", "CSS3", "Chart.js"],
     image: "assets/images/projects/expense-tracker.webp",
-    repoUrl: "https://github.com/ryanhidayat/expense-tracker",
-    demoUrl: "https://ryanhidayat.github.io/expense-tracker"
+    repoUrl: "https://github.com/rynsky30/expense-tracker",
+    demoUrl: "https://rynsky30.github.io/expense-tracker"
   }
 ];
 

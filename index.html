@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Muhammad Ryan Hidayat — Portfolio</title>
+  <meta name="description" content="Portfolio Muhammad Ryan Hidayat — mahasiswa Teknik Informatika Universitas Bina Insani. Proyek web, keahlian teknis, dan kontak.">
+  <meta name="theme-color" content="#FFFFFF" id="theme-color-meta">
+  <title>Muhammad Ryan Hidayat — Web Developer Portfolio</title>
 
   <!-- Google Fonts preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/variables.css">
@@ -23,32 +28,47 @@
   <a class="skip-link" href="#main">Lewati ke konten utama</a>
 
   <!-- ===== HEADER / NAV ===== -->
-  <header>
-    <nav aria-label="Navigasi utama">
-      <div class="nav__brand">
-        <a href="#hero" class="nav__logo">M Ryan Hidayat</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Navigasi utama">
+
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-mark" aria-hidden="true">MR</span>
+        <span class="nav__logo-text">Ryan Hidayat</span>
+      </a>
+
+      <div class="nav__actions">
+        <button
+          class="nav__theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="Ganti tema terang/gelap"
+        >
+          <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+        </button>
+
+        <button
+          class="nav__hamburger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Buka atau tutup menu navigasi"
+        >
+          <span class="hamburger__icon" aria-hidden="true"></span>
+        </button>
       </div>
 
-      <button
-        class="nav__hamburger"
-        aria-expanded="false"
-        aria-controls="nav-menu"
-        aria-label="Buka atau tutup menu navigasi"
-      >
-        <span class="hamburger__icon" aria-hidden="true"></span>
-      </button>
-
       <ul id="nav-menu" class="nav__list" role="list">
-        <li><a class="nav__link" href="#hero">Home</a></li>
-        <li><a class="nav__link" href="#about">About</a></li>
-        <li><a class="nav__link" href="#projects">Projects</a></li>
-        <li><a class="nav__link" href="#skills">Skills</a></li>
-        <li><a class="nav__link" href="#contact">Contact</a></li>
-        <li>
-          <button class="nav__theme-toggle" id="theme-toggle" aria-label="Ganti tema terang/gelap">
-            🌙
-          </button>
-        </li>
+        <li><a class="nav__link" href="#hero">Beranda</a></li>
+        <li><a class="nav__link" href="#about">Tentang</a></li>
+        <li><a class="nav__link" href="#projects">Proyek</a></li>
+        <li><a class="nav__link" href="#skills">Keahlian</a></li>
+        <li><a class="nav__link" href="#contact">Kontak</a></li>
       </ul>
     </nav>
   </header>
@@ -57,194 +77,387 @@
   <main id="main">
 
     <!-- Hero -->
-    <section id="hero" aria-label="Perkenalan Muhammad Ryan Hidayat">
-      <img
-        src="assets/images/profile.webp"
-        alt="Foto profil Muhammad Ryan Hidayat"
-        loading="eager"
-        width="200"
-        height="200"
-        class="hero__photo"
-      >
-      <h1>Muhammad Ryan Hidayat</h1>
-      <p class="hero__tagline">Mahasiswa Teknik Informatika yang antusias di bidang pengembangan web dan pemrograman berbasis data.</p>
-      <a href="#projects" class="btn btn--primary hero__cta">Lihat Proyek</a>
-      <div class="hero__links">
-        <a
-          href="https://linkedin.com/in/ryanhidayat"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hero__social-link"
-          aria-label="Profil LinkedIn Muhammad Ryan Hidayat"
-        >LinkedIn ↗</a>
-        <a
-          href="https://github.com/ryanhidayat"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hero__social-link"
-          aria-label="Profil GitHub Muhammad Ryan Hidayat"
-        >GitHub ↗</a>
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+
+        <div class="hero__content">
+          <p class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            Terbuka untuk magang &amp; kolaborasi
+          </p>
+
+          <h1 class="hero__title" id="hero-title">
+            Muhammad <span class="text-gradient">Ryan Hidayat</span>
+          </h1>
+
+          <p class="hero__tagline">
+            Mahasiswa Teknik Informatika yang antusias di bidang pengembangan web
+            dan pemrograman berbasis data.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary hero__cta">
+              Lihat Proyek
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M5 12h14M13 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn--ghost">Hubungi Saya</a>
+          </div>
+
+          <div class="hero__links">
+            <a
+              href="https://linkedin.com/in/m-ryan-hidayat-50b728398"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hero__social-link"
+              aria-label="Profil LinkedIn Muhammad Ryan Hidayat (terbuka di tab baru)"
+            >
+              <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/rynsky30"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hero__social-link"
+              aria-label="Profil GitHub Muhammad Ryan Hidayat (terbuka di tab baru)"
+            >
+              <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M9 19c-4.5 1.5-5-2-7-2"/>
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1 0-3.2 1.6a11 11 0 0 0-5.8 0C7.5 1.6 6.4 1.6 6.4 1.6a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 5 8c0 3.5 3 5.5 6 5.5a4.8 4.8 0 0 0-1 3.5v4"/>
+              </svg>
+              GitHub
+            </a>
+            <a
+              href="https://wa.me/6289635935625"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hero__social-link"
+              aria-label="Chat WhatsApp dengan Muhammad Ryan Hidayat (terbuka di tab baru)"
+            >
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.48-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.09 3.19 5.06 4.48.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 2C6.5 2 2 6.5 2 12.04c0 1.77.46 3.5 1.34 5.02L2 22l5.05-1.32A9.98 9.98 0 0 0 12.04 22c5.54 0 10.04-4.5 10.04-10.04C22.08 6.5 17.58 2 12.04 2zm0 18.3c-1.67 0-3.3-.45-4.73-1.3l-.34-.2-3 .79.8-2.92-.22-.36A8.27 8.27 0 0 1 3.78 12c0-4.56 3.71-8.27 8.26-8.27 4.56 0 8.27 3.71 8.27 8.27 0 4.56-3.71 8.27-8.27 8.27z"/>
+              </svg>
+              WhatsApp
+            </a>
+          </div>
+
+          <dl class="hero__stats">
+            <div class="hero__stat">
+              <dt>Proyek</dt>
+              <dd>4</dd>
+            </div>
+            <div class="hero__stat">
+              <dt>Keahlian</dt>
+              <dd>14</dd>
+            </div>
+            <div class="hero__stat">
+              <dt>Angkatan</dt>
+              <dd>2023</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__portrait">
+            <img
+              src="assets/images/profile.webp"
+              alt="Foto profil Muhammad Ryan Hidayat"
+              loading="eager"
+              fetchpriority="high"
+              width="400"
+              height="400"
+              class="hero__photo"
+            >
+          </div>
+        </div>
+
       </div>
     </section>
 
     <!-- About -->
-    <section id="about" aria-label="Tentang Muhammad Ryan Hidayat">
+    <section id="about" class="section section--surface" aria-labelledby="about-title">
       <div class="container">
-        <h2>Tentang Saya</h2>
-
-        <p>
-          Halo! Saya Muhammad Ryan Hidayat, mahasiswa <strong>Teknik Informatika</strong> di
-          <strong>Universitas Bina Insani</strong> yang memiliki ketertarikan mendalam pada
-          pengembangan web dan rekayasa perangkat lunak. Sejak awal kuliah, saya aktif belajar
-          membangun aplikasi berbasis web — mulai dari antarmuka pengguna yang responsif dengan
-          HTML, CSS, dan JavaScript, hingga logika sisi server menggunakan Python dan PHP.
-          Saya percaya bahwa kode yang baik bukan hanya kode yang berjalan, tetapi kode yang
-          mudah dibaca, dipelihara, dan dikembangkan oleh tim. Di luar kelas, saya senang
-          mengerjakan proyek pribadi, berkontribusi pada komunitas, dan terus memperbarui
-          pemahaman saya tentang teknologi terkini. Saya juga tertarik pada bidang keamanan
-          aplikasi web dan praktik pengembangan perangkat lunak yang terstruktur. Ketika tidak
-          sedang menulis kode, saya biasanya membaca dokumentasi teknis, mengikuti kursus
-          daring, atau berdiskusi dengan rekan-rekan tentang solusi terbaik untuk masalah
-          pemrograman sehari-hari.
-        </p>
-
-        <div class="about__meta">
-          <p>
-            <span class="about__label">Universitas:</span>
-            Universitas Bina Insani — Teknik Informatika
+        <header class="section__header reveal">
+          <p class="eyebrow">Tentang Saya</p>
+          <h2 class="section__title" id="about-title">Belajar membangun web yang rapi dan mudah dipakai</h2>
+          <p class="section__lead">
+            Perjalanan saya di dunia pengembangan web: dari halaman statis pertama
+            sampai aplikasi berbasis data.
           </p>
-          <p>
-            <span class="about__label">Angkatan:</span>
-            <span id="enrollment-year">2023</span>
-          </p>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__body reveal">
+            <p>
+              Halo! Saya Muhammad Ryan Hidayat, mahasiswa <strong>Teknik Informatika</strong> di
+              <strong>Universitas Bina Insani</strong>. Saya membangun antarmuka web yang responsif
+              dengan HTML, CSS, dan JavaScript, lalu menghubungkannya ke logika sisi server
+              menggunakan Python, PHP, dan basis data relasional.
+            </p>
+            <p>
+              Bagi saya, kode yang baik bukan hanya kode yang berjalan — tetapi kode yang mudah
+              dibaca, dipelihara, dan dikembangkan bersama tim. Di luar kelas saya mengerjakan
+              proyek pribadi, mengikuti kursus daring, dan mendalami keamanan aplikasi web serta
+              praktik rekayasa perangkat lunak yang terstruktur.
+            </p>
+          </div>
+
+          <aside class="about__aside reveal" aria-label="Ringkasan pendidikan dan tujuan karier">
+            <div class="info-card">
+              <dl class="info-list">
+                <div class="info-list__row">
+                  <dt>Universitas</dt>
+                  <dd>Universitas Bina Insani</dd>
+                </div>
+                <div class="info-list__row">
+                  <dt>Program Studi</dt>
+                  <dd>Teknik Informatika</dd>
+                </div>
+                <div class="info-list__row">
+                  <dt>Angkatan</dt>
+                  <dd><span id="enrollment-year">2023</span></dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="info-card info-card--accent">
+              <h3 class="info-card__title">Tujuan Karier</h3>
+              <p>
+                Menjadi software engineer full-stack yang membangun produk digital berdampak,
+                dengan fokus pada pengembangan web modern dan praktik rekayasa perangkat lunak
+                berkualitas tinggi.
+              </p>
+            </div>
+
+            <a
+              href="assets/docs/cv-ryan.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              id="cv-download-btn"
+              class="btn btn--primary btn--block"
+            >
+              Unduh CV
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              </svg>
+            </a>
+            <p id="cv-error-msg" class="cv-error" hidden aria-live="polite">
+              CV tidak dapat dimuat saat ini.
+            </p>
+          </aside>
         </div>
-
-        <div class="about__goal">
-          <p>
-            <span class="about__label">Tujuan Karir:</span>
-            Menjadi software engineer full-stack yang mampu membangun produk digital berdampak,
-            dengan spesialisasi pada pengembangan web modern dan praktik rekayasa perangkat lunak
-            yang berkualitas tinggi.
-          </p>
-        </div>
-
-        <a
-          href="assets/docs/cv-ryan.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          id="cv-download-btn"
-          class="btn btn--primary"
-        >
-          Unduh CV ↗
-        </a>
-        <p id="cv-error-msg" class="cv-error" hidden aria-live="polite">
-          CV tidak dapat dimuat saat ini.
-        </p>
       </div>
     </section>
 
     <!-- Projects -->
-    <section id="projects" aria-label="Proyek">
-      <h2>Proyek</h2>
-      <div id="projects-grid" class="projects__grid"></div>
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <p class="eyebrow">Proyek</p>
+          <h2 class="section__title" id="projects-title">Karya yang sudah saya bangun</h2>
+          <p class="section__lead">
+            Proyek akademik dan pribadi yang saya kerjakan dari nol: perancangan antarmuka,
+            logika aplikasi, sampai pengelolaan basis data.
+          </p>
+        </header>
+
+        <div id="projects-grid" class="projects__grid"></div>
+      </div>
     </section>
 
     <!-- Skills -->
-    <section id="skills" aria-label="Keahlian">
-      <h2>Keahlian</h2>
-      <div id="skills-container" class="skills__grid"></div>
+    <section id="skills" class="section section--surface" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <p class="eyebrow">Keahlian</p>
+          <h2 class="section__title" id="skills-title">Perangkat yang saya pakai sehari-hari</h2>
+          <p class="section__lead">
+            Dari bahasa pemrograman hingga alat kolaborasi — inilah yang saya gunakan untuk
+            membangun aplikasi web.
+          </p>
+        </header>
+
+        <div id="skills-container" class="skills__grid"></div>
+      </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" aria-label="Kontak">
-      <div class="container">
-        <h2>Hubungi Saya</h2>
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container contact__grid">
 
-        <form id="contact-form" novalidate>
-          <div class="form__group">
-            <label for="contact-name">Nama</label>
-            <input
-              type="text"
-              id="contact-name"
-              name="name"
-              maxlength="100"
-              autocomplete="name"
-              required
-            >
-            <div id="contact-name-error" class="form__error" role="alert" aria-live="polite"></div>
-          </div>
+        <div class="contact__info reveal">
+          <p class="eyebrow">Kontak</p>
+          <h2 class="section__title" id="contact-title">Punya ide atau peluang? Mari bicarakan.</h2>
+          <p class="section__lead">
+            Terbuka untuk magang, proyek freelance, atau kolaborasi pengembangan web.
+            Kirim pesan lewat formulir — biasanya saya balas dalam 1–2 hari.
+          </p>
 
-          <div class="form__group">
-            <label for="contact-email">Email</label>
-            <input
-              type="email"
-              id="contact-email"
-              name="email"
-              maxlength="254"
-              autocomplete="email"
-              required
-            >
-            <div id="contact-email-error" class="form__error" role="alert" aria-live="polite"></div>
-          </div>
-
-          <div class="form__group">
-            <label for="contact-message">Pesan</label>
-            <textarea
-              id="contact-message"
-              name="message"
-              maxlength="1000"
-              rows="5"
-              required
-            ></textarea>
-            <div id="contact-message-error" class="form__error" role="alert" aria-live="polite"></div>
-          </div>
-
-          <button type="submit" class="btn btn--primary" id="contact-submit">
-            Kirim Pesan
-          </button>
-
-          <div id="form-status" role="alert" aria-live="polite"></div>
-        </form>
-
-        <div class="contact__social">
-          <p>— Atau temukan saya di —</p>
-          <div class="contact__social-links">
-            <a
-              href="https://linkedin.com/in/ryanhidayat"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact__social-link"
-              aria-label="Profil LinkedIn Muhammad Ryan Hidayat"
-            >LinkedIn ↗</a>
-            <a
-              href="https://github.com/ryanhidayat"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact__social-link"
-              aria-label="Profil GitHub Muhammad Ryan Hidayat"
-            >GitHub ↗</a>
-            <a
-              href="mailto:ryanhidayat@example.com"
-              class="contact__social-link"
-              aria-label="Kirim email ke Muhammad Ryan Hidayat"
-            >ryanhidayat@example.com</a>
-          </div>
+          <ul class="contact__channels" role="list">
+            <li>
+              <a class="channel" href="mailto:mryanhidayat01@gmail.com">
+                <span class="channel__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                  </svg>
+                </span>
+                <span class="channel__text">
+                  <span class="channel__label">Email</span>
+                  <span class="channel__value">mryanhidayat01@gmail.com</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="channel"
+                href="https://linkedin.com/in/m-ryan-hidayat-50b728398"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Profil LinkedIn Muhammad Ryan Hidayat (terbuka di tab baru)"
+              >
+                <span class="channel__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                  </svg>
+                </span>
+                <span class="channel__text">
+                  <span class="channel__label">LinkedIn</span>
+                  <span class="channel__value">in/m-ryan-hidayat-50b728398</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="channel"
+                href="https://github.com/rynsky30"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Profil GitHub Muhammad Ryan Hidayat (terbuka di tab baru)"
+              >
+                <span class="channel__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                    <path d="M9 19c-4.5 1.5-5-2-7-2"/>
+                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1 0-3.2 1.6a11 11 0 0 0-5.8 0C7.5 1.6 6.4 1.6 6.4 1.6a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 5 8c0 3.5 3 5.5 6 5.5a4.8 4.8 0 0 0-1 3.5v4"/>
+                  </svg>
+                </span>
+                <span class="channel__text">
+                  <span class="channel__label">GitHub</span>
+                  <span class="channel__value">github.com/rynsky30</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="channel"
+                href="https://wa.me/6289635935625"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat WhatsApp dengan Muhammad Ryan Hidayat (terbuka di tab baru)"
+              >
+                <span class="channel__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" focusable="false">
+                    <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.48-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.09 3.19 5.06 4.48.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 2C6.5 2 2 6.5 2 12.04c0 1.77.46 3.5 1.34 5.02L2 22l5.05-1.32A9.98 9.98 0 0 0 12.04 22c5.54 0 10.04-4.5 10.04-10.04C22.08 6.5 17.58 2 12.04 2zm0 18.3c-1.67 0-3.3-.45-4.73-1.3l-.34-.2-3 .79.8-2.92-.22-.36A8.27 8.27 0 0 1 3.78 12c0-4.56 3.71-8.27 8.26-8.27 4.56 0 8.27 3.71 8.27 8.27 0 4.56-3.71 8.27-8.27 8.27z"/>
+                  </svg>
+                </span>
+                <span class="channel__text">
+                  <span class="channel__label">WhatsApp</span>
+                  <span class="channel__value">+62 896-3593-5625</span>
+                </span>
+              </a>
+            </li>
+          </ul>
         </div>
+
+        <div class="contact__form-wrap reveal">
+          <form id="contact-form" class="contact__form" novalidate>
+            <div class="form__group">
+              <label class="form__label" for="contact-name">Nama</label>
+              <input
+                class="form__input"
+                type="text"
+                id="contact-name"
+                name="name"
+                maxlength="100"
+                autocomplete="name"
+                placeholder="Nama lengkap Anda"
+                required
+              >
+              <div id="contact-name-error" class="form__error" role="alert" aria-live="polite"></div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="contact-email">Email</label>
+              <input
+                class="form__input"
+                type="email"
+                id="contact-email"
+                name="email"
+                maxlength="254"
+                autocomplete="email"
+                placeholder="nama@domain.com"
+                required
+              >
+              <div id="contact-email-error" class="form__error" role="alert" aria-live="polite"></div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="contact-message">Pesan</label>
+              <textarea
+                class="form__textarea"
+                id="contact-message"
+                name="message"
+                maxlength="1000"
+                rows="5"
+                placeholder="Ceritakan sedikit tentang ide atau peluang Anda…"
+                required
+              ></textarea>
+              <div id="contact-message-error" class="form__error" role="alert" aria-live="polite"></div>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--block contact__submit" id="contact-submit">
+              Kirim Pesan
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+              </svg>
+            </button>
+
+            <div id="form-status" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+
       </div>
     </section>
 
   </main>
 
   <!-- ===== FOOTER ===== -->
-  <footer>
-    <p>© 2026 Muhammad Ryan Hidayat</p>
-    <p>Dibuat dengan HTML, CSS &amp; JavaScript</p>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__brand">© 2026 Muhammad Ryan Hidayat</p>
+      <p class="footer__note">Dibuat dengan HTML, CSS &amp; JavaScript</p>
+      <a class="footer__top" href="#hero">
+        Kembali ke atas
+        <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+      </a>
+    </div>
   </footer>
 
   <!-- ===== JS MODULES ===== -->
   <script type="module">
     import { initTheme }                    from './assets/js/theme.js';
     import { initNav }                      from './assets/js/nav.js';
+    import { initReveal }                   from './assets/js/reveal.js';
     import { renderProjects, renderSkills } from './assets/js/render.js';
     import { initContactForm }              from './assets/js/form.js';
 
@@ -252,6 +465,7 @@
     initNav();
     renderProjects();
     renderSkills();
+    initReveal();
     initContactForm();
   </script>
 

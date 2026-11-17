@@ -14,23 +14,28 @@ export function initNav() {
 // ─── Scroll Spy ─────────────────────────────────────────────────────────────
 
 /**
- * Observe every <section> in <main>. When a section's intersection ratio
- * crosses 0.5 (i.e. ≥ 50 % of it is in the viewport), mark that section's
- * nav link as active.
+ * Observe every <section> in <main>. A section becomes active when it
+ * crosses the vertical middle of the viewport, so the nav link matching
+ * the section the user is actually reading gets highlighted.
  */
 function setupScrollSpy() {
   const sections = document.querySelectorAll('main section[id]');
   if (!sections.length) return;
 
+  if (typeof IntersectionObserver === 'undefined') {
+    setActiveLink(sections[0].id);
+    return;
+  }
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+        if (entry.isIntersecting) {
           setActiveLink(entry.target.id);
         }
       });
     },
-    { threshold: [0, 0.5] }
+    { rootMargin: '-45% 0px -50% 0px', threshold: 0 }
   );
 
   sections.forEach((section) => observer.observe(section));
@@ -42,7 +47,7 @@ function setupScrollSpy() {
  *
  * @param {string} id - The id of the currently visible section.
  */
-function setActiveLink(id) {
+export function setActiveLink(id) {
   const links = document.querySelectorAll('.nav__link');
   links.forEach((link) => link.classList.remove('nav__link--active'));
 
@@ -73,22 +78,24 @@ function getNavMenu() {
 function setupHamburger() {
   const btn = getHamburgerBtn();
   if (!btn) return;
-  btn.addEventListener('click', toggleMenu);
+  btn.addEventListener('click', () => toggleMenu());
 }
 
 /**
  * Toggle the navigation menu between open and closed states.
  * Open  → aria-expanded="true"  + add .nav__list--open + focus first link.
- * Close → aria-expanded="false" + remove .nav__list--open + focus button.
+ * Close → aria-expanded="false" + remove .nav__list--open + restore focus.
+ *
+ * @param {boolean} [restoreFocus=true] - Whether to return focus to the hamburger button.
  */
-function toggleMenu() {
+export function toggleMenu(restoreFocus = true) {
   const btn  = getHamburgerBtn();
   const menu = getNavMenu();
   if (!btn || !menu) return;
 
   const isOpen = btn.getAttribute('aria-expanded') === 'true';
   if (isOpen) {
-    closeMenu();
+    closeMenu(restoreFocus);
   } else {
     btn.setAttribute('aria-expanded', 'true');
     menu.classList.add('nav__list--open');
@@ -101,16 +108,20 @@ function toggleMenu() {
 
 /**
  * Close the navigation menu unconditionally.
- * Returns focus to the hamburger button.
+ *
+ * @param {boolean} [restoreFocus=true] - Whether to return focus to the hamburger button.
  */
-function closeMenu() {
+export function closeMenu(restoreFocus = true) {
   const btn  = getHamburgerBtn();
   const menu = getNavMenu();
   if (!btn || !menu) return;
 
   btn.setAttribute('aria-expanded', 'false');
   menu.classList.remove('nav__list--open');
-  btn.focus();
+
+  if (restoreFocus) {
+    btn.focus();
+  }
 }
 
 // ─── Keyboard Close ──────────────────────────────────────────────────────────
@@ -124,7 +135,7 @@ function setupKeyboardClose() {
     if (event.key === 'Escape') {
       const btn = getHamburgerBtn();
       if (btn && btn.getAttribute('aria-expanded') === 'true') {
-        closeMenu();
+        closeMenu(true);
       }
     }
   });
@@ -134,7 +145,7 @@ function setupKeyboardClose() {
 
 /**
  * Attach click listeners to every .nav__link inside #nav-menu so that
- * clicking any of them closes the mobile menu (Requirement 1.7).
+ * clicking any of them closes the mobile menu without stealing focus.
  */
 function closeMenuOnLinkClick() {
   const menu = getNavMenu();
@@ -145,7 +156,7 @@ function closeMenuOnLinkClick() {
     link.addEventListener('click', () => {
       const btn = getHamburgerBtn();
       if (btn && btn.getAttribute('aria-expanded') === 'true') {
-        closeMenu();
+        closeMenu(false);
       }
     });
   });

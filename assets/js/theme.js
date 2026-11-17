@@ -3,7 +3,7 @@
 const STORAGE_KEY = 'portfolio-theme';
 
 /**
- * Read localStorage safely — returns null if unavailable (e.g. private browsing).
+ * Read localStorage safely.
  * @returns {string|null}
  */
 function safeGetStorage() {
@@ -14,25 +14,17 @@ function safeGetStorage() {
   }
 }
 
-/**
- * Write to localStorage safely — silently does nothing if unavailable.
- * @param {string} theme
- */
+/** Write to localStorage safely. */
 function safeSetStorage(theme) {
   try {
     localStorage.setItem(STORAGE_KEY, theme);
   } catch {
-    // localStorage unavailable — carry on without persisting
+    // Silently ignore (private browsing / restrictions)
   }
 }
 
 /**
- * Determine the preferred theme using the priority order:
- *   1. Value stored in localStorage (if present and valid)
- *   2. OS-level prefers-color-scheme: dark
- *   3. Fall back to "light"
- *
- * @returns {'light' | 'dark'}
+ * Determine preferred theme: localStorage → OS prefers-color-scheme → 'light'.
  */
 export function detectPreference() {
   const stored = safeGetStorage();
@@ -52,40 +44,35 @@ export function detectPreference() {
 }
 
 /**
- * Apply the given theme to the document and persist it.
+ * Apply a theme and persist it. Also update `<meta name="theme-color">` so
+ * mobile browser chrome adapts to the active theme.
  *
  * @param {'light' | 'dark'} theme
  */
 export function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   safeSetStorage(theme);
+
+  const meta = document.getElementById('theme-color-meta');
+  if (meta) {
+    meta.content = theme === 'dark' ? '#0B0F19' : '#FFFFFF';
+  }
 }
 
-/**
- * Flip the current theme and apply it.
- * Current theme is read from the data-theme attribute so it always
- * reflects the live DOM state rather than a stale module-level variable.
- */
+/** Flip theme and re-apply. */
 export function toggleTheme() {
   const current = document.documentElement.getAttribute('data-theme');
   const next = current === 'dark' ? 'light' : 'dark';
   applyTheme(next);
 }
 
-/**
- * Initialise the theme system.
- *
- * - Detects and applies the preferred theme.
- * - Wires the #theme-toggle button to toggleTheme().
- *
- * Call this once after the DOM is ready.
- */
+/** Initialize on DOM ready. */
 export function initTheme() {
   const theme = detectPreference();
   applyTheme(theme);
 
   const btn = document.getElementById('theme-toggle');
   if (btn) {
-    btn.addEventListener('click', toggleTheme);
+    btn.addEventListener('click', () => toggleTheme());
   }
 }
